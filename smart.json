@@ -1,0 +1,9 @@
+{	
+	"name": "meteor-bird",
+	"author": "Julio",
+	"version": "0.0.1",	
+
+  	"packages": {
+    	"bootstrap-3": {}
+  	}
+}
