@@ -7,15 +7,17 @@ Router.map(function (){
 			var _id  = Meteor.userId();
 			this.subscribe('posts', _id);
 			this.subscribe('friendship', _id);
+			this.next();
 		},
 		data: function(){
 			var _id  = Meteor.userId();
 			return {
-				posts: Post.list(timelineIds),
+				posts: Post.find({}),
 				followers: Friendship.followers(_id),
 				followings: Friendship.followings(_id)
 			}
-		}
+		},
+		fastRender: true;
 	});
 
 	this.route('user', {
@@ -40,7 +42,8 @@ Router.map(function (){
 				followers: Friendship.followers(_id),
 				followings: Friendship.followings(_id)
 			}
-		}
+		},
+		fastRender: true;
 	});
 
 	this.route('follow', {

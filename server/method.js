@@ -14,7 +14,7 @@ Meteor.methods({
 			}}
 		);
 	},
-	publishPost: function(mesage, name){
-		Post.publish(mesage, name);
+	publishPost: function(message, name){
+		Post.publish(message, name);
 	}
 });

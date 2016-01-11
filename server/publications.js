@@ -2,7 +2,7 @@ Meteor.autorun(function (){
 
 	Meteor.publish('posts', function(_id){
 		var timilineIds = Friendship.timilineIds(_id);
-		return Posts.list(timilineIds)
+		return Posts.list(timilineIds);
 	});
 
 	Meteor.publish('friendship', function(_id){
